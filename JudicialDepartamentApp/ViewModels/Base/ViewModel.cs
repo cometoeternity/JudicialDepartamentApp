@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JudicialDepartamentApp.ViewModel.Base
+namespace JudicialDepartamentApp.ViewModels.Base
 {
     public abstract class ViewModel : INotifyPropertyChanged, IDisposable
     {

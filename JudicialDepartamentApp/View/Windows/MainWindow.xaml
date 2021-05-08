@@ -3,10 +3,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:JudicialDepartamentApp"
+        xmlns:vm="clr-namespace:JudicialDepartamentApp.ViewModels"
+        xmlns:l="clr-namespace:JudicialDepartamentApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="{Binding Path=Title}" Height="450" Width="815">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл"></MenuItem>
+            <MenuItem Header="Помощь"></MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem >
+                <TextBlock Text="Judical Departament App. 2021г. Новосибирск"/>
+            </StatusBarItem>
+        </StatusBar>
+        <TabControl>
+            <TabItem Header="Создание дела" Width="160"></TabItem>
+            <TabItem Header="Изменение дела" Width="160"></TabItem>
+            <TabItem Header="Просмотр дела" Width="160"></TabItem>
+            <TabItem Header="Архивирование дела" Width="160"></TabItem>
+            <TabItem Header="Поиск дела" Width="165"></TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
