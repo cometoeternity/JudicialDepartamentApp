@@ -11,6 +11,7 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <DockPanel>
+        <Frame Name="mainFrame" NavigationUIVisibility="Hidden"/>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Файл"></MenuItem>
             <MenuItem Header="Помощь"></MenuItem>

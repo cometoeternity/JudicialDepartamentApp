@@ -10,19 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JudicialDepartamentApp.View.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для AuthWindow.xaml
+    /// Логика взаимодействия для AuthPage.xaml
     /// </summary>
-    public partial class AuthWindow : Window
+    public partial class AuthPage : Page
     {
-        public AuthWindow()
+        public AuthPage()
         {
             InitializeComponent();
-            mainFrame.Navigate(new Uri("/View/Windows/AuthPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+        MainWindow MainWindow { get => Application.Current.MainWindow as MainWindow; }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.mainFrame.Navigate(new Uri("/View/MainWindow.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }
