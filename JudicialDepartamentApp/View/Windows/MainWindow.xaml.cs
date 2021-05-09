@@ -10,12 +10,10 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace JudicialDepartamentApp.View
-{ 
+namespace JudicialDepartamentApp.View.Windows
+{
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>

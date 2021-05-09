@@ -24,10 +24,10 @@ namespace JudicialDepartamentApp.View.Windows
         {
             InitializeComponent();
         }
-        MainWindow MainWindow { get => Application.Current.MainWindow as MainWindow; }
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainFrame.Navigate(new Uri("/View/MainWindow.xaml", UriKind.RelativeOrAbsolute));
+           
         }
     }
 }

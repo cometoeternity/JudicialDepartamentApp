@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JudicialDepartamentApp.View.Windows"
         mc:Ignorable="d" Background="WhiteSmoke"
-        Title="AuthWindow" Height="768" Width="1024">
+        Title="Авторизация в системе" Height="768" Width="1024">
     <Grid>
         <Frame Name="mainFrame"/>
     </Grid>
