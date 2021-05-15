@@ -20,10 +20,15 @@
             <ColumnDefinition Width="228"/>
         </Grid.ColumnDefinitions>
         <Grid>
-            <StackPanel Orientation="Vertical" Margin="0, 63, 0, 0">
-                <TextBlock Text="Служба Правового Обеспечения" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontFamily="Arial Rounded MT Bold"/>
-                <TextBlock Text="ФБУ Администрация Обского БВП" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontFamily="Arial Rounded MT Bold"/>
-                <CustomControls:MenuButton Margin="0,53,0,0" Padding="20,0,0,0" Icon="{StaticResource MyDrive}" Text="Задачи на сегодня"  GroupName="MenuButton"/>
+            <StackPanel Orientation="Vertical">
+                <Rectangle Height="170" Width="250">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/View/Assets/MainWindowImages/Logo.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <!--<TextBlock Text="Служба Правового Обеспечения" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontFamily="Arial Rounded MT Bold"/>
+                <TextBlock Text="ФБУ Администрация Обского БВП" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontFamily="Arial Rounded MT Bold"/>-->
+                <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource MyDrive}" Text="Задачи на сегодня"  GroupName="MenuButton"/>
 
                 <TextBlock Margin="30, 27, 0, 0" Text="Судебные документы" Style="{StaticResource TitleText}"/>
 
