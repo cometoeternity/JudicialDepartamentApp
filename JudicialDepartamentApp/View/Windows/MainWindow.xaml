@@ -1,12 +1,68 @@
-﻿<Window x:Class="JudicialDepartamentApp.View.Windows.MainWindow"
+﻿<Window xmlns:CustomControls="clr-namespace:JudicialDepartamentApp.View.CustomControls"  x:Class="JudicialDepartamentApp.View.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JudicialDepartamentApp.View.Windows"
         mc:Ignorable="d"
-        Title="Главное меню" Height="900" Width="1438">
+        Title="Главное меню" Height="900" Width="1438" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/View/Resourses/icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="228"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <StackPanel Orientation="Vertical" Margin="0, 63, 0, 0">
+                <TextBlock Text="Служба Правового Обеспечения" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontFamily="Arial Rounded MT Bold"/>
+                <TextBlock Text="ФБУ Администрация Обского БВП" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontFamily="Arial Rounded MT Bold"/>
+                <CustomControls:MenuButton Margin="0,53,0,0" Padding="20,0,0,0" Icon="{StaticResource MyDrive}" Text="Задачи на сегодня"  GroupName="MenuButton"/>
+
+                <TextBlock Margin="30, 27, 0, 0" Text="Судебные документы" Style="{StaticResource TitleText}"/>
+
+                <StackPanel Orientation="Vertical">
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource MyFilesFolder}" Text="Посмотреть все" GroupName="MenuButton"/>
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource plus}" Text="Добавить новое" GroupName="MenuButton"/>
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource Filerequest}" Text="Изменить файлы" GroupName="MenuButton"/>
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource Trash}" Text="Архивировать дело" GroupName="MenuButton"/>
+                </StackPanel>
+                <TextBlock Margin="30, 27, 0, 0" Text="Основные документы" Style="{StaticResource TitleText}"/>
+
+                <StackPanel Orientation="Vertical">
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource Folders}" Text="Уголовные дела" GroupName="MenuButton"/>
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource Folders}" Text="Административные дела" GroupName="MenuButton"/>
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource Folders}" Text="Внутренний распорядок" GroupName="MenuButton"/>
+                    <CustomControls:MenuButton  Padding="20,0,0,0" Icon="{StaticResource Folders}" Text="Работа с контр-агентами" GroupName="MenuButton"/>
+                </StackPanel>
+            </StackPanel>
+            <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Ellipse Height="36" Width="36" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/View/Assets/MainWindowImages/profile1.jpg" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Grid Grid.Column="1" Margin="14,0,0,0" Width="150">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Иванов И. И." Style="{StaticResource TitleText}"/>
+                    <TextBlock Grid.Row="1" Text="Начальник службы" Style="{StaticResource MainText}"/>
+                    <TextBlock Grid.Row="2" Text="Правового Обеспечения" Style="{StaticResource MainText}"/>
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
